@@ -1,7 +1,7 @@
-# BRIEFING — 2026-10-10T05:55:18Z
+# BRIEFING — 2026-10-10T07:36:23Z
 
 ## Mission
-Coordinate creation of placeholder data and basic tests for RTO Sahayak project via teamwork orchestrator.
+Orchestrate creation of synthetic ID documents, expected field JSONs, and compare.py comparison script with tests for RTO Sahayak.
 
 ## 🔒 My Identity
 - Archetype: sentinel
@@ -10,6 +10,8 @@ Coordinate creation of placeholder data and basic tests for RTO Sahayak project 
 - Victory Auditor: [to be spawned on victory claim]
 - Orchestrator Conv ID: 525f2e2d-7c79-4e1b-8b12-652bee744787
 - Victory Auditor Conv ID: c8e1b002-174e-428a-a7be-f0aae6243a62
+- Orchestrator Conv ID (Current): e35c4cb9-e0bf-457f-8b67-5c1e9c1c606b
+- Victory Auditor Conv ID (Current): [TBD]
 
 ## 🔒 Key Constraints
 - No technical decisions — relay only
@@ -20,15 +22,18 @@ Coordinate creation of placeholder data and basic tests for RTO Sahayak project 
 - Always use send_message to report results back to parent caller (d88d335a-7063-4ff3-ae3a-39206b19ef2d).
 
 ## User Context
-- **Last user request**: Create placeholder data rules in data/rules/, fees data in data/fees.json, and basic tests in tests/ (adversarial.txt and test_basic.py).
+- **Last user request**: Create 4 fake ID/certificate PNGs in data/samples/ marked SYNTHETIC, save expected fields JSON for each, implement compare_documents(docs) in compare.py, and write unit tests in tests/.
 - **Pending clarifications**: none
-- **Delivered results**: none
+- **Delivered results**: previous milestone complete (data/rules, fees.json, tests/test_basic.py)
 
 ## Project Status
-- **Phase**: auditing
+- **Phase**: in progress
+- **Route**: General (teamwork_preview_orchestrator)
+- **Cron 1 Task**: 68ef24c8-290a-4f19-af2a-95b053f5ccd1/task-20
+- **Cron 2 Task**: 68ef24c8-290a-4f19-af2a-95b053f5ccd1/task-22
 
 ## Victory Audit Status
-- **Triggered**: yes
+- **Triggered**: no
 - **Verdict**: pending
 - **Retry count**: 0
 
