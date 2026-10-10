@@ -1,6 +1,7 @@
 import os
 import json
 import glob
+import csv
 
 def lookup_rules(topic: str) -> dict:
     """Reads data/rules/*.md and returns the best match based on simple keyword matching."""
@@ -45,3 +46,73 @@ def build_checklist(service: str, age: int) -> dict:
         except Exception:
             pass
     return {"documents": documents}
+
+def extract_document(file_id: str) -> dict:
+    """Sends image bytes to Gemini and asks for JSON only. Do not log contents."""
+    from google import genai
+    from google.genai import types
+    import json
+    import streamlit as st
+    
+    client = genai.Client()
+    model = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+    
+    system_instruction = "Extract the document details into a valid JSON object with exact keys: type, name, dob, address, masked_id. Do not output markdown, just raw JSON."
+    
+    config = types.GenerateContentConfig(
+        system_instruction=system_instruction,
+        temperature=0.0
+    )
+    
+    file_bytes = st.session_state.uploaded_files.get(file_id)
+    if not file_bytes:
+        return {"error": "File not found."}
+        
+    try:
+        response = client.models.generate_content(
+            model=model,
+            contents=[types.Part.from_bytes(data=file_bytes, mime_type="image/jpeg"), "Extract document details as JSON."],
+            config=config
+        )
+        
+        text = response.text.strip()
+        if text.startswith("```json"):
+            text = text[7:]
+        if text.endswith("```"):
+            text = text[:-3]
+            
+        return json.loads(text.strip())
+    except Exception as e:
+        return {"error": str(e)}
+
+def licence_stats(state: str, year: str = "2019-20") -> dict:
+    """Reads historical statistics about licences issued."""
+    open_dir = os.path.join(os.path.dirname(__file__), "data", "open")
+    csv_path = os.path.join(open_dir, "licences.csv")
+    sources_path = os.path.join(open_dir, "SOURCES.md")
+    
+    source_text = "Unknown Source"
+    try:
+        with open(sources_path, "r", encoding="utf-8") as f:
+            source_text = f.read().strip()
+    except FileNotFoundError:
+        pass
+        
+    try:
+        with open(csv_path, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                if row.get("state", "").lower() == state.lower() and row.get("year", "") == year:
+                    return {
+                        "total": int(row.get("total", 0)),
+                        "male": int(row.get("male", 0)),
+                        "female": int(row.get("female", 0)),
+                        "professional": int(row.get("professional", 0)),
+                        "non_professional": int(row.get("non_professional", 0)),
+                        "source": source_text,
+                        "year": year
+                    }
+    except FileNotFoundError:
+        pass
+        
+    return {"available": False, "reason": "state did not report this year"}

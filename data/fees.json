@@ -1,7 +1,34 @@
 {
-  "_note": "PLACEHOLDER",
-  "fees": [
-    {"service": "license", "vehicle_class": "LMV", "amount": 500},
-    {"service": "registration", "vehicle_class": "MCWG", "amount": 300}
-  ]
+  "metadata": {
+    "source": "TODO",
+    "PLACEHOLDER": "verify against official sources"
+  },
+  "services": {
+    "new_ll": {
+      "motorcycle_without_gear": {
+        "issue_fee": "[TODO]",
+        "test_fee": "[TODO]"
+      },
+      "motorcycle_with_gear": {
+        "issue_fee": "[TODO]",
+        "test_fee": "[TODO]"
+      },
+      "light_motor_vehicle": {
+        "issue_fee": "[TODO]",
+        "test_fee": "[TODO]"
+      }
+    },
+    "new_dl": {
+      "motorcycle_without_gear": {
+        "issue_fee": "[TODO]",
+        "test_fee": "[TODO]",
+        "smart_card_fee": "[TODO]"
+      },
+      "light_motor_vehicle": {
+        "issue_fee": "[TODO]",
+        "test_fee": "[TODO]",
+        "smart_card_fee": "[TODO]"
+      }
+    }
+  }
 }
