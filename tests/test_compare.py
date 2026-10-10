@@ -248,10 +248,6 @@ class TestSyntheticSamplesIntegration(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.samples_dir = find_samples_dir()
-        try:
-            generate_samples.ensure_samples()
-        except Exception:
-            pass
 
     def test_samples_exist_and_are_non_empty(self):
         expected_json = [

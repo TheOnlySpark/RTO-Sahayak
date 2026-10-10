@@ -22,3 +22,15 @@ Output:
 Write your challenge report to e:\hackthon\.agents\teamwork\m2_r2_challenger_2\handoff.md.
 State your clear verdict: APPROVE or REQUEST_CHANGES.
 Send message to caller (parent) with your summary and verdict.
+
+## 2026-10-10T09:38:06Z
+USER_REQUEST:
+Plan artifact first. Work only in pdf_tools.py, mock_api.py and tests/.
+1. generate_handoff_pdf(summary: dict) -> {"pdf_path": str} with ReportLab.
+   Banner: "DRAFT - for citizen review and officer verification". Sections:
+   citizen summary (SYNTHETIC), checklist status, document mismatches
+   (facts only), estimated fees (marked as estimates), rule sources, next
+   steps. Footer: "Final decision rests with the RTO officer." Mask ID numbers.
+   Save to outputs/. Test by generating a sample.
+2. mock_api.py: get_slots(rto_code: str) -> {"slots": [str], "note": "synthetic
+   sample slots, not real availability"}.

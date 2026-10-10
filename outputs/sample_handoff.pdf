@@ -1,0 +1,74 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1729 >>
+stream
+BT
+/F1 9 Tf
+40 760 Td
+12 TL
+(*** DRAFT - for citizen review and officer verification ***) '
+() '
+(RTO Sahayak - Citizen Consultation & Handoff Summary) '
+(Service: Learner Licence to Driving Licence | Ref: SYNTH-REF-001 | Status: DRAFT) '
+(--------------------------------------------------------------------------------) '
+(1. Citizen Summary [SYNTHETIC]) '
+(   Full Name: Rahul Kumar Sharma [SYNTHETIC]) '
+(   Date of Birth: 1995-05-15) '
+(   Father's Name: Suresh Kumar Sharma) '
+(   Document ID [Masked]: FAKE-DL-XXXX-0001) '
+() '
+(2. Checklist Status) '
+(   - Application Form 2: Submitted) '
+(   - Learner Licence: Submitted) '
+(   - Medical Fitness [Form 1A]: Pending) '
+() '
+(3. Document Discrepancy Analysis [Factual Comparison Only]) '
+(   - Discrepancy on 'date_of_birth': Driving Licence='1995-05-15' vs Aadhaar Card='1993-05-15') '
+() '
+(4. Estimated Fees [Placeholder Estimates]) '
+(   ESTIMATE ONLY - Placeholder figures subject to official RTO schedule.) '
+(   - Application Fee: Rs. 200 [ESTIMATE]) '
+(   - Driving Test Fee: Rs. 300 [ESTIMATE]) '
+(   - Smart Card Processing Fee: Rs. 200 [ESTIMATE]) '
+(   Total Estimated Outlay: Rs. 700 [ESTIMATE]) '
+() '
+(5. Rule Sources & References) '
+(   - data/rules/ll_to_dl_process.md) '
+(   - data/rules/documents_checklist.md) '
+(   - data/rules/fees_overview.md) '
+() '
+(6. Next Steps for Citizen) '
+(   1. Book an appointment slot at RTO Synthetic Zone 04 via Parivahan.) '
+(   2. Bring original physical documents for officer in-person verification.) '
+(   3. Pay statutory official fees at authorized RTO counter.) '
+() '
+(--------------------------------------------------------------------------------) '
+(Notice: Final decision rests with the RTO officer.) '
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000002022 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2092
+%%EOF
