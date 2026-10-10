@@ -1,0 +1,70 @@
+{
+  "_metadata": {
+    "version": "1.0.0",
+    "status": "PLACEHOLDER",
+    "source": "TODO: Verify against CMVR 1989 Rule 32 and State Gazette",
+    "disclaimer": "All fee values are placeholder figures for prototype testing. Final decision rests with the RTO officer."
+  },
+  "services": {
+    "learner_license": {
+      "service_name": "Learner's License Issuance",
+      "status": "PLACEHOLDER",
+      "source": "TODO: CMVR Rule 32 Table - PLACEHOLDER",
+      "rates": {
+        "MCWOG": { "application_fee": 150, "test_fee": 50, "total_fee": 200, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "MCWG": { "application_fee": 150, "test_fee": 50, "total_fee": 200, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "LMV": { "application_fee": 150, "test_fee": 50, "total_fee": 200, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "LMV-NT": { "application_fee": 150, "test_fee": 50, "total_fee": 200, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "TRANS": { "application_fee": 200, "test_fee": 100, "total_fee": 300, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" }
+      }
+    },
+    "driving_license": {
+      "service_name": "Permanent Driving License Issuance",
+      "status": "PLACEHOLDER",
+      "source": "TODO: CMVR Rule 32 Table - PLACEHOLDER",
+      "rates": {
+        "MCWOG": { "application_fee": 200, "test_fee": 300, "smart_card_fee": 200, "total_fee": 700, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "MCWG": { "application_fee": 200, "test_fee": 300, "smart_card_fee": 200, "total_fee": 700, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "LMV": { "application_fee": 200, "test_fee": 300, "smart_card_fee": 200, "total_fee": 700, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "LMV-NT": { "application_fee": 200, "test_fee": 300, "smart_card_fee": 200, "total_fee": 700, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "TRANS": { "application_fee": 300, "test_fee": 500, "smart_card_fee": 200, "total_fee": 1000, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" }
+      }
+    },
+    "renewal": {
+      "service_name": "Driving License Renewal",
+      "status": "PLACEHOLDER",
+      "source": "TODO: CMVR Rule 32 Table - PLACEHOLDER",
+      "rates": {
+        "MCWOG": { "application_fee": 200, "smart_card_fee": 200, "late_fee_per_year": 1000, "total_fee": 400, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "MCWG": { "application_fee": 200, "smart_card_fee": 200, "late_fee_per_year": 1000, "total_fee": 400, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "LMV": { "application_fee": 200, "smart_card_fee": 200, "late_fee_per_year": 1000, "total_fee": 400, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "LMV-NT": { "application_fee": 200, "smart_card_fee": 200, "late_fee_per_year": 1000, "total_fee": 400, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "TRANS": { "application_fee": 250, "smart_card_fee": 200, "late_fee_per_year": 1000, "total_fee": 450, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" }
+      }
+    },
+    "vehicle_transfer": {
+      "service_name": "Vehicle Ownership Transfer",
+      "status": "PLACEHOLDER",
+      "source": "TODO: CMVR Rule 81 Table - PLACEHOLDER",
+      "rates": {
+        "MCWOG": { "transfer_fee": 150, "smart_card_rc": 200, "total_fee": 350, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "MCWG": { "transfer_fee": 150, "smart_card_rc": 200, "total_fee": 350, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "LMV": { "transfer_fee": 300, "smart_card_rc": 200, "total_fee": 500, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "LMV-NT": { "transfer_fee": 300, "smart_card_rc": 200, "total_fee": 500, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "TRANS": { "transfer_fee": 500, "smart_card_rc": 200, "total_fee": 700, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" }
+      }
+    },
+    "duplicate_license": {
+      "service_name": "Duplicate Driving License Issuance",
+      "status": "PLACEHOLDER",
+      "source": "TODO: CMVR Rule 32 Table - PLACEHOLDER",
+      "rates": {
+        "MCWOG": { "application_fee": 200, "smart_card_fee": 200, "total_fee": 400, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "MCWG": { "application_fee": 200, "smart_card_fee": 200, "total_fee": 400, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "LMV": { "application_fee": 200, "smart_card_fee": 200, "total_fee": 400, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "LMV-NT": { "application_fee": 200, "smart_card_fee": 200, "total_fee": 400, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" },
+        "TRANS": { "application_fee": 250, "smart_card_fee": 200, "total_fee": 450, "currency": "INR", "status": "PLACEHOLDER", "source": "TODO" }
+      }
+    }
+  }
+}
