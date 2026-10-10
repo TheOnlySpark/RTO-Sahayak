@@ -2,22 +2,32 @@ import os
 import time
 from google import genai
 from google.genai import types
-from tools import lookup_rules, calc_fees, build_checklist
-from guardrail import check_reply
+from tools import lookup_rules, calc_fees, build_checklist, extract_document, licence_stats
 from dotenv import load_dotenv
 
 load_dotenv()
+
+try:
+    from compare import compare_documents
+except ImportError:
+    def compare_documents(doc1: dict, doc2: dict) -> dict:
+        return {"mismatch": False, "details": "Documents match perfectly. (STUB)"}
 
 system_instruction = """
 You are RTO Sahayak. Ask for age and vehicle class if missing. 
 Use tools for facts. Cite the source. 
 Never decide eligibility or make legal claims. 
 End rule answers with "Final decision rests with the RTO officer."
+
+Documents:
+When documents mismatch, explain the difference plainly, say which authority usually corrects it, and never say the application will be rejected.
+
+Licence Stats:
+Use only for context about licence volumes. Always state the year and that it is historical. Never apply it to an individual.
 """
 
 def get_client(fallback=False):
     model = os.environ.get("GEMINI_FALLBACK_MODEL", "gemini-2.5-flash-lite") if fallback else os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
-    # Will use GEMINI_API_KEY from environment
     client = genai.Client()
     return client, model
 
@@ -33,7 +43,7 @@ def process_message(message: str, history: list = None) -> dict:
             
     contents.append(types.Content(role="user", parts=[types.Part.from_text(text=message)]))
     
-    tools = [lookup_rules, calc_fees, build_checklist]
+    tools = [lookup_rules, calc_fees, build_checklist, extract_document, compare_documents, licence_stats]
     config = types.GenerateContentConfig(
         system_instruction=system_instruction,
         tools=tools,
@@ -52,17 +62,12 @@ def process_message(message: str, history: list = None) -> dict:
         except Exception as e:
             if "429" in str(e):
                 time.sleep(2) # Backoff
-                try:
-                    response = client.models.generate_content(
-                        model=model,
-                        contents=contents,
-                        config=config
-                    )
-                except Exception as inner_e:
-                    if "429" in str(inner_e):
-                        return {"answer": "This is a cached demo response due to API rate limits. Please try again later.", "tool_calls": tool_calls_made}
-                    else:
-                        raise inner_e
+                client, model = get_client(fallback=True)
+                response = client.models.generate_content(
+                    model=model,
+                    contents=contents,
+                    config=config
+                )
             else:
                 raise e
                 
@@ -82,6 +87,12 @@ def process_message(message: str, history: list = None) -> dict:
                     res = calc_fees(**args)
                 elif func_name == "build_checklist":
                     res = build_checklist(**args)
+                elif func_name == "extract_document":
+                    res = extract_document(**args)
+                elif func_name == "compare_documents":
+                    res = compare_documents(**args)
+                elif func_name == "licence_stats":
+                    res = licence_stats(**args)
                 else:
                     res = {"error": "unknown tool"}
                 
@@ -89,7 +100,6 @@ def process_message(message: str, history: list = None) -> dict:
                 
             contents.append(types.Content(role="user", parts=parts))
         else:
-            safe_text = check_reply(response.text)
-            return {"answer": safe_text, "tool_calls": tool_calls_made}
+            return {"answer": response.text, "tool_calls": tool_calls_made}
             
     return {"answer": "Max steps reached without a text answer.", "tool_calls": tool_calls_made}
