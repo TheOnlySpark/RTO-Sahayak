@@ -1,0 +1,7 @@
+{
+  "_note": "PLACEHOLDER",
+  "fees": [
+    {"service": "license", "vehicle_class": "LMV", "amount": 500},
+    {"service": "registration", "vehicle_class": "MCWG", "amount": 300}
+  ]
+}

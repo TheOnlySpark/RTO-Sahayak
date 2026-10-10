@@ -1,7 +1,3 @@
----
-trigger: always_on
----
-
 # RTO Sahayak rules
 - This is a Gen AI AGENT: Gemini decides when to call tools. Do not replace
   it with a fixed if/else flow.
