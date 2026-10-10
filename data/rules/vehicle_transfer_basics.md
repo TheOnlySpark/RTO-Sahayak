@@ -1,17 +1,21 @@
-Source: TODO
-PLACEHOLDER: verify against official sources
+Source: TODO (Section 50 Motor Vehicles Act 1988)
 
 # Vehicle Ownership Transfer Basics
 
-If you buy or sell a used vehicle in Tamil Nadu, you must transfer the ownership (RC transfer).
+## Overview
+Transfer of vehicle ownership is required when a registered motor vehicle is sold or transferred to another person.
 
-## Forms Required
-- Form [TODO]: Notice of transfer of ownership.
-- Form [TODO]: Report of transfer of ownership (to be signed by both buyer and seller).
+## Essential Forms & Requirements
+- **Form 29**: Notice of transfer of ownership in duplicate.
+- **Form 30**: Application for transfer of ownership.
+- **Original Registration Certificate (RC)**.
+- **Valid Insurance & PUC Certificate**.
+- **Form 35 / NOC**: Required if vehicle was under hypothecation/loan.
+- **Form 28 (NOC)**: Required if buyer resides in a different RTO jurisdiction.
 
-## Process
-- The seller should hand over the original Registration Certificate (RC), valid insurance, and pollution certificate (PUC) to the buyer.
-- Apply online for transfer of ownership within [TODO] days of purchase.
-- Pay the transfer fee of Rs. [TODO].
-- Submit the forms and documents to the RTO.
-- The new RC will be mailed to the buyer's address.
+## Timelines
+Report transfer within 14 days for intra-state transfers, and 45 days for inter-state transfers.
+
+Final decision rests with the RTO officer.
+
+PLACEHOLDER: verify against official sources

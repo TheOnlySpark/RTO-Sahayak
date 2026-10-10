@@ -1,24 +1,26 @@
-Source: TODO
-PLACEHOLDER: verify against official sources
+Source: TODO (Parivahan Sarathi Required Documents Schedule)
 
-# Required Documents Checklist
+# RTO Documents Checklist
 
-When applying for a driving licence or vehicle service in Tamil Nadu, keep these documents ready.
+## Standard Document Requirements
+Applicants must bring original documents and self-attested copies for verification.
 
-## Proof of Age (Any One)
-- Birth Certificate
-- School/Educational Certificate
-- Passport
-- [TODO: list other valid age proofs]
+### Identity & Age Proof (Any One)
+- Aadhaar Card (SYNTHETIC demo reference)
+- Passport / Voter ID Card
+- Birth Certificate or School Leaving Certificate
 
-## Proof of Address (Any One)
+### Address Proof (Any One)
 - Aadhaar Card
-- Passport
-- Voter ID
-- Recent Utility Bill (Electricity/Water)
-- [TODO: list other valid address proofs]
+- Recent Utility Bill (Electricity / Water)
+- Registered Rent Agreement
 
-## Other Required Items
-- Passport-sized photographs (usually [TODO] copies)
-- Medical Certificate in Form [TODO] (if applicable)
-- Existing Learner's Licence (for DL application)
+### Medical & Service-Specific Documents
+- Form 1 (Self-declaration of physical fitness)
+- Form 1A (Medical Certificate for transport or age > 40)
+- Existing Valid Learner License or Current Driving License
+- 3 Passport-sized Photographs
+
+Final decision rests with the RTO officer.
+
+PLACEHOLDER: verify against official sources

@@ -1,16 +1,18 @@
-Source: TODO
+Source: TODO (Section 15 Motor Vehicles Act 1988)
+
+# Driving License Renewal Basics
+
+## Validity and Timelines
+- Non-transport licenses are typically valid for up to 20 years or until age 40, whichever is earlier.
+- Renewal applications can be filed within 1 year before expiry or up to 1 year post-expiry without a re-test.
+- Applications submitted more than 1 year after expiry may require a re-test of driving competence.
+
+## Required Steps
+1. Fill Form 2 online on the Parivahan portal.
+2. Upload medical certificate (Form 1A) if applicant is above 40 years of age or for transport categories.
+3. Submit original expired DL for verification.
+4. Pay renewal fee and late charges if applicable.
+
+Final decision rests with the RTO officer.
+
 PLACEHOLDER: verify against official sources
-
-# Driving Licence Renewal Basics
-
-Your Driving Licence is usually valid for a long time, but you need to renew it when it expires.
-
-## When to Renew
-- You can apply for renewal up to [TODO] days before expiry, or up to [TODO] days after expiry without a major penalty.
-- Applying very late may require you to take the driving test again.
-
-## Process
-- Apply online on the Parivahan website using Form [TODO].
-- If you are over the age of [TODO], you must submit a Medical Certificate in Form [TODO].
-- Upload your documents, pay the fee of Rs. [TODO], and submit the application.
-- In many cases, you don't even need to visit the RTO; the renewed card will be mailed to you.
