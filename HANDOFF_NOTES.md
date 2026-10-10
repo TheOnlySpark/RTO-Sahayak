@@ -91,3 +91,13 @@ def build_checklist(service: str) -> dict:
 
 ### 3. Test Compatibility Note:
 The test suite in `tests/test_basic.py` attempts to import these functions from `tools.py`. If `tools.py` has not yet implemented them or is 0 bytes, `test_basic.py` falls back to reference stubs that read the real `data/rules/*.md` and `data/fees.json`, ensuring clean pytest passes without modifying `tools.py`. Once Laptop 1 implements `tools.py`, `tests/test_basic.py` will automatically test the live implementation!
+
+---
+
+# Request for other agents (regarding PDF Generation)
+
+The user reported that the PDF banner is missing.
+Please update `pdf_tools.py` (which I do not own) to ensure that the Handoff PDFs carry the exact banner:
+`DRAFT - for citizen review and officer verification`
+
+If `pdf_tools.py` doesn't exist yet, please create it and ensure any PDF generated includes this banner as per the project rules.

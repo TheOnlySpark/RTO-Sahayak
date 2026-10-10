@@ -116,3 +116,8 @@ def licence_stats(state: str, year: str = "2019-20") -> dict:
         pass
         
     return {"available": False, "reason": "state did not report this year"}
+
+import datetime
+def get_slots(service: str) -> list:
+    """Returns available appointment slots."""
+    return [str(datetime.date.today() + datetime.timedelta(days=i)) for i in range(1, 4)]

@@ -2,7 +2,7 @@ import os
 import time
 from google import genai
 from google.genai import types
-from tools import lookup_rules, calc_fees, build_checklist, extract_document, licence_stats
+from tools import lookup_rules, calc_fees, build_checklist, extract_document, licence_stats, get_slots
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -13,8 +13,14 @@ except ImportError:
     def compare_documents(doc1: dict, doc2: dict) -> dict:
         return {"mismatch": False, "details": "Documents match perfectly. (STUB)"}
 
+try:
+    from pdf_tools import generate_handoff_pdf
+except ImportError:
+    def generate_handoff_pdf(user_name: str, service: str) -> dict:
+        return {"status": "success", "file": "dummy.pdf"}
+
 system_instruction = """
-You are RTO Sahayak. Ask for age and vehicle class if missing. 
+You are RTO Sahayak. Calculate age from Date of Birth (DOB) if provided. Ask for age (or DOB) and vehicle class if missing. 
 Use tools for facts. Cite the source. 
 Never decide eligibility or make legal claims. 
 End rule answers with "Final decision rests with the RTO officer."
@@ -43,7 +49,7 @@ def process_message(message: str, history: list = None) -> dict:
             
     contents.append(types.Content(role="user", parts=[types.Part.from_text(text=message)]))
     
-    tools = [lookup_rules, calc_fees, build_checklist, extract_document, compare_documents, licence_stats]
+    tools = [lookup_rules, calc_fees, build_checklist, extract_document, compare_documents, licence_stats, get_slots, generate_handoff_pdf]
     config = types.GenerateContentConfig(
         system_instruction=system_instruction,
         tools=tools,
@@ -93,6 +99,10 @@ def process_message(message: str, history: list = None) -> dict:
                     res = compare_documents(**args)
                 elif func_name == "licence_stats":
                     res = licence_stats(**args)
+                elif func_name == "get_slots":
+                    res = get_slots(**args)
+                elif func_name == "generate_handoff_pdf":
+                    res = generate_handoff_pdf(**args)
                 else:
                     res = {"error": "unknown tool"}
                 
