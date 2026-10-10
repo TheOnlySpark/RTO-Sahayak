@@ -1,0 +1,14 @@
+{
+  "doc_id": "doc2_aadhaar_card",
+  "document_type": "Aadhaar Card",
+  "document_number": "FAKE-UID-9999-8888-7777",
+  "full_name": "Rahul Kumar Sharma",
+  "date_of_birth": "1993-05-15",
+  "father_name": "Suresh Kumar Sharma",
+  "address": "123, Gandhi Marg, Synthetic City, New Delhi - 110001",
+  "issue_date": "2012-08-10",
+  "expiry_date": null,
+  "issuing_authority": "UIDAI (Synthetic Mock)",
+  "is_synthetic": true,
+  "disclaimer": "SYNTHETIC DOCUMENT - FOR TESTING ONLY. DRAFT - for citizen review and officer verification. Final decision rests with the RTO officer."
+}

@@ -1,0 +1,14 @@
+{
+  "doc_id": "doc4_voter_id",
+  "document_type": "Voter ID Card",
+  "document_number": "FAKE-EPIC-XYZ9876543",
+  "full_name": "Priya Sanjay Patel",
+  "date_of_birth": "22/11/1998",
+  "father_name": "Sanjay Patel",
+  "address": "45, Patel Colony, Synthetic Nagar, Ahmedabad - 380001",
+  "issue_date": "2017-01-10",
+  "expiry_date": null,
+  "issuing_authority": "Election Commission of India (Synthetic Mock)",
+  "is_synthetic": true,
+  "disclaimer": "SYNTHETIC DOCUMENT - FOR TESTING ONLY. DRAFT - for citizen review and officer verification. Final decision rests with the RTO officer."
+}
