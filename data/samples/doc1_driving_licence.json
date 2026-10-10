@@ -1,0 +1,15 @@
+{
+  "doc_id": "doc1_driving_licence",
+  "document_type": "Driving Licence",
+  "document_number": "FAKE-DL-DL04-20150001",
+  "full_name": "Rahul Kumar Sharma",
+  "date_of_birth": "1995-05-15",
+  "father_name": "Suresh Kumar Sharma",
+  "address": "123, Gandhi Marg, Synthetic City, New Delhi - 110001",
+  "issue_date": "2015-06-20",
+  "expiry_date": "2035-05-14",
+  "issuing_authority": "RTO Synthetic Zone 04, New Delhi",
+  "is_synthetic": true,
+  "disclaimer": "SYNTHETIC DOCUMENT - FOR TESTING ONLY. DRAFT - for citizen review and officer verification. Final decision rests with the RTO officer.",
+  "vehicle_class": "LMV, MCWG"
+}

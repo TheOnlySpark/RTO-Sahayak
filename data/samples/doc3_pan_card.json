@@ -1,0 +1,14 @@
+{
+  "doc_id": "doc3_pan_card",
+  "document_type": "PAN Card",
+  "document_number": "FAKE-PAN-ABCDE1234F",
+  "full_name": "Priya S. Patel",
+  "date_of_birth": "1998-11-22",
+  "father_name": "Sanjay Patel",
+  "address": "45, Patel Colony, Synthetic Nagar, Ahmedabad - 380001",
+  "issue_date": "2018-03-15",
+  "expiry_date": null,
+  "issuing_authority": "Income Tax Department (Synthetic Mock)",
+  "is_synthetic": true,
+  "disclaimer": "SYNTHETIC DOCUMENT - FOR TESTING ONLY. DRAFT - for citizen review and officer verification. Final decision rests with the RTO officer."
+}
