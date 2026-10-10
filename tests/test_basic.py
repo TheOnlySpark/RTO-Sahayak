@@ -2,11 +2,12 @@
 Unit tests for RTO Sahayak basic tools: lookup_rules, calc_fees, build_checklist.
 Complies with Laptop 2 constraints: tests data/rules/ and data/fees.json.
 Provides clean fallback stubs that read the real data/rules/*.md and data/fees.json
-if tools.py is not yet implemented by Laptop 1.
+if tools.py is not yet implemented or does not yet match the Milestone 1 specification.
 """
 import os
 import sys
 import json
+import inspect
 import pytest
 
 # Find project data root
@@ -37,9 +38,25 @@ for candidate_root in [
 
 # Attempt to import tools; fallback to reference implementations reading actual data
 try:
-    from tools import lookup_rules, calc_fees, build_checklist  # type: ignore
-    assert callable(lookup_rules) and callable(calc_fees) and callable(build_checklist)
-except (ImportError, AttributeError, AssertionError):
+    import tools
+    _lr = getattr(tools, "lookup_rules", None)
+    _cf = getattr(tools, "calc_fees", None)
+    _bc = getattr(tools, "build_checklist", None)
+    assert callable(_lr) and callable(_cf) and callable(_bc)
+    
+    # Check if tools matches Milestone 1 specification
+    sig_bc = inspect.signature(_bc)
+    if len(sig_bc.parameters) != 1:
+        raise NotImplementedError("build_checklist signature mismatch")
+    
+    sample_fee = _cf("learner_license", "LMV")
+    if not isinstance(sample_fee, dict) or "total_fee" not in sample_fee:
+        raise NotImplementedError("calc_fees return format mismatch")
+        
+    lookup_rules = _lr
+    calc_fees = _cf
+    build_checklist = _bc
+except Exception:
     def lookup_rules(topic: str) -> str:
         """Fallback reference stub: reads actual rule markdown files."""
         normalized_topic = topic.strip().lower().replace(" ", "_").replace("-", "_")
